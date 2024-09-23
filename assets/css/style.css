@@ -1,6 +1,7 @@
 @font-face {
     font-family: 'Figtree';
-    src: url('../fonts/Figtree-VariableFont_wght.ttf') format('truetype-variations')
+    src: url('../fonts/Figtree-VariableFont_wght.ttf') format('truetype-variations');
+    font-display: swap;
 }
 
 * {
@@ -47,7 +48,7 @@ a {
     place-items: center;
 }
 
-.contact-card {
+.user-card {
     width: 90%;
     max-width: 400px;
     background: var(--grey-700);
@@ -63,69 +64,65 @@ a {
     color: var(--white);
 }
 
-.contact-card .info {
+.user-card__info {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 24px;
 }
 
-.contact-card .picture {
+.user-card__picture {
     height: 80px;
     aspect-ratio: 1/1;
     clip-path: circle(50%);
     overflow: hidden;
 }
 
-.contact-card .picture img {
+.user-card__picture img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.contact-card .personal {
+.user-card__details {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-.contact-card .personal .name {
+.user-card__name {
     font: var(--text-preset-1);
 }
 
-.contact-card .personal .location {
+.user-card__location {
     font: var(--text-preset-2);
     color: var(--green);
 }
 
-.contact-card .ocupattion p {
+.user-card__occupation {
     font: var(--text-preset-3);
     color: var(--grey-100);
 }
 
-
-.link-container {
-    width: 100%;
-}
-
-.links {
+.user-card__links {
+    min-width: 100%;
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.link-btn {
+.user-card__btn {
     display: block;
-    background: var(--grey-500);
+    background-color: var(--grey-500);
     font: var(--text-preset-2);
     padding: 1rem;
     width: 100%;
     border-radius: 10px;
-    transition: color .25s ease, background .25s ease;
+    transition: color .25s ease, background-color .25s ease;
 }
 
-.link-btn:hover {
-    background: var(--green);
+.user-card__btn:hover {
+    background-color: var(--green);
     color: var(--grey-700);
 }
 
